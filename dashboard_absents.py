@@ -113,7 +113,7 @@ st.markdown('<h1 class="main-header">📊 Dashboard des Absences</h1>', unsafe_a
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('absents.csv')
+        df = pd.read_csv('clients_numero_absents_mars_2026.csv', sep=';')
         # Nettoyage des données
         df = df.dropna(subset=['Client'])
         df['Client'] = df['Client'].str.strip()
@@ -272,7 +272,7 @@ if len(df_filtre) > 0:
 
     
     with col3:
-        st.info(f"**Période analysée:** Février 2026")
+        st.info(f"**Période analysée:** Mars 2026")
     
     # Tableau interactif
     st.markdown('<div class="data-table">', unsafe_allow_html=True)
