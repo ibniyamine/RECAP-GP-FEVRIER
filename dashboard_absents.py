@@ -113,7 +113,7 @@ st.markdown('<h1 class="main-header">📊 Dashboard des Absences</h1>', unsafe_a
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('clients_numero_absents_mars_2026.csv', sep=';')
+        df = pd.read_csv('clients_absents_mars_2026.csv')
         # Nettoyage des données
         df = df.dropna(subset=['Client'])
         df['Client'] = df['Client'].str.strip()
